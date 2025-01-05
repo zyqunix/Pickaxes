@@ -14,4 +14,11 @@ tile.cobalt_ore.name=Cobalt Ore
 
 //Tools
 item.ruby_pickaxe.name=Ruby Pickaxe
+item.cobalt_pickaxe.name=Cobalt Pickaxe
 item.ultimate_pickaxe.name=Ultimate Pickaxe
+
+// Armor
+item.mining_helmet.name=Mining Helmet
+item.mining_chestplate.name=Mining Chestplate
+item.mining_pants.name=Mining Pants
+item.mining_boots.name=Mining Boots

@@ -4,6 +4,7 @@ import com.zyqunix.pickaxes.init.ModRecipes;
 import com.zyqunix.pickaxes.proxy.CommonProxy;
 import com.zyqunix.pickaxes.util.Reference;
 
+import com.zyqunix.pickaxes.util.handlers.KeyInputHandler;
 import com.zyqunix.pickaxes.world.ModWorldGen;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import net.minecraftforge.fml.common.Mod;
@@ -32,6 +33,7 @@ public class Main {
     @EventHandler
     public static void init(FMLInitializationEvent event) {
         ModRecipes.init();
+        proxy.init();
     }
 
     @EventHandler
