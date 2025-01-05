@@ -1,0 +1,16 @@
+[
+	{
+		"modid": "pa",
+		"name": "Pickaxes",
+		"description": "A Mod with a lot of Pickaxes.",
+		"version": "1.0",
+		"mcversion": "1.12.2",
+		"url": "https://fentseller.lol",
+		"updateUrl": "",
+		"authorList": ["zyqunix"],
+		"credits": "zyqunix da goat",
+		"logoFile": "",
+		"screenshots": [],
+		"dependencies": []
+	}
+]

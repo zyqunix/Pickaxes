@@ -1,0 +1,6 @@
+{
+	"parent": "pa:block/cobalt_ore",
+	"textures": {
+		"layer0": "pa:blocks/cobalt_ore"
+	}
+}

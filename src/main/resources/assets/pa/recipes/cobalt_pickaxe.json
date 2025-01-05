@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+
+    "pattern":
+    [
+        "CCC",
+        " S ",
+        " S "
+    ],
+
+    "key":
+    {
+        "R":
+        {
+            "item": "pa:cobalt_ingot"
+        },
+        "S":
+        {
+	        "item": "minecraft:stick"
+        }
+    },
+
+    "result":
+    {
+        "item": "pa:cobalt_pickaxe",
+        "count": 1
+    }
+}

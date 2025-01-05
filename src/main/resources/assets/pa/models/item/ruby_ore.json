@@ -1,0 +1,6 @@
+{
+	"parent": "pa:block/ruby_ore",
+	"textures": {
+		"layer0": "pa:blocks/ruby_ore"
+	}
+}

@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:crafting_shaped",
+
+    "pattern":
+    [
+        "LMR",
+        " S ",
+        " H "
+    ],
+
+    "key":
+    {
+	    "L":
+	    {
+		    "item": "pa:ultimate_piece_left"
+	    },
+	    "M":
+	    {
+		    "item": "pa:ultimate_piece_middle"
+	    },
+	    "R":
+	    {
+		    "item": "pa:ultimate_piece_right"
+	    },
+        "S":
+        {
+	        "item": "pa:ultimate_stick"
+        },
+	    "H":
+	    {
+		    "item": "pa:ultimate_handle"
+	    }
+    },
+
+    "result":
+    {
+        "item": "pa:cobalt_pickaxe",
+        "count": 1
+    }
+}

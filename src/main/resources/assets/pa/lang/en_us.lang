@@ -1,0 +1,17 @@
+
+//Items
+item.ruby.name=Ruby
+item.crystallized_ruby.name=Crystallized Ruby
+item.cobalt_ingot.name=Cobalt Ingot
+
+//Blocks
+tile.ruby_block.name=Ruby Block
+tile.cobalt_block.name=Cobalt Block
+
+//Ores
+tile.ruby_ore.name=Ruby Ore
+tile.cobalt_ore.name=Cobalt Ore
+
+//Tools
+item.ruby_pickaxe.name=Ruby Pickaxe
+item.ultimate_pickaxe.name=Ultimate Pickaxe
