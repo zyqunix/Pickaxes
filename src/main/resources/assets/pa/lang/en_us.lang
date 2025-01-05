@@ -15,6 +15,7 @@ tile.cobalt_ore.name=Cobalt Ore
 //Tools
 item.ruby_pickaxe.name=Ruby Pickaxe
 item.cobalt_pickaxe.name=Cobalt Pickaxe
+item.tnt_pickaxe.name=TNT Pickaxe
 item.ultimate_pickaxe.name=Ultimate Pickaxe
 
 // Armor
