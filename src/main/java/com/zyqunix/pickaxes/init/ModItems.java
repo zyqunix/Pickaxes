@@ -2,6 +2,7 @@ package com.zyqunix.pickaxes.init;
 
 import com.zyqunix.pickaxes.items.ItemBase;
 import com.zyqunix.pickaxes.items.armor.ArmorBase;
+import com.zyqunix.pickaxes.items.tools.TNTPickaxe;
 import com.zyqunix.pickaxes.items.tools.ToolPickaxe;
 import com.zyqunix.pickaxes.util.Reference;
 import net.minecraft.init.SoundEvents;
@@ -32,7 +33,7 @@ public class ModItems {
     // Tools
     public static final ItemPickaxe RUBY_PICKAXE = new ToolPickaxe("ruby_pickaxe", MATERIAL_RUBY);
     public static final ItemPickaxe COBALT_PICKAXE = new ToolPickaxe("cobalt_pickaxe", MATERIAL_COBALT);
-    public static final ItemPickaxe TNT_PICKAXE = new ToolPickaxe("tnt_pickaxe", MATERIAL_TNT);
+    public static final ItemPickaxe TNT_PICKAXE = new TNTPickaxe("tnt_pickaxe", MATERIAL_TNT);
 
     // Armor
     public static final Item MINING_HELMET = new ArmorBase("mining_helmet", ARMOR_MATERIAL_MINING, 1, EntityEquipmentSlot.HEAD);
