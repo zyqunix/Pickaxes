@@ -25,10 +25,12 @@ public class TNTPickaxe extends ToolPickaxe {
         Vec3d aim = player.getLookVec();
 
         EntityLargeFireball fireball = new EntityLargeFireball(world, player, 1, 1, 1);
-        fireball.setPosition(player.posX + aim.x * 1.5D, player.posY + aim.y * 1.5D, player.posZ + aim.z * 1.5D);
+        fireball.setPosition(player.posX + aim.x * 1.5D, player.posY + 1 + aim.y * 1.5D, player.posZ + aim.z * 1.5D);
         fireball.accelerationX = aim.x * 0.1;
         fireball.accelerationY = aim.y * 0.1;
         fireball.accelerationZ = aim.z * 0.1;
+        fireball.explosionPower = 5;
+
         world.spawnEntity(fireball);
 
         /*
