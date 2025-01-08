@@ -1,0 +1,40 @@
+{
+    "type": "minecraft:crafting_shaped",
+
+    "pattern":
+    [
+        "EDD",
+        "CGD",
+        "RRE"
+    ],
+
+    "key":
+    {
+        "D":
+        {
+            "item": "minecraft:diamond"
+        },
+        "C":
+        {
+            "item": "pa:cobalt_ingot"
+        },
+        "R":
+        {
+            "item": "pa:ruby"
+        },
+        "G":
+        {
+            "item": "minecraft:gold_ingot"
+        },
+        "E":
+        {
+	        "item": "minecraft:emerald"
+        }
+    },
+
+    "result":
+    {
+        "item": "pa:utlimate_piece_right",
+        "count": 1
+    }
+}

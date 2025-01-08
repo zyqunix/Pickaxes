@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+
+    "pattern":
+    [
+        "DDE",
+        "CDR",
+        "CER"
+    ],
+
+    "key":
+    {
+        "D":
+        {
+            "item": "minecraft:diamond"
+        },
+        "C":
+        {
+            "item": "pa:cobalt_ingot"
+        },
+        "R":
+        {
+            "item": "pa:ruby"
+        },
+        "E":
+        {
+	        "item": "minecraft:emerald"
+        }
+    },
+
+    "result":
+    {
+        "item": "pa:utlimate_piece_middle",
+        "count": 1
+    }
+}

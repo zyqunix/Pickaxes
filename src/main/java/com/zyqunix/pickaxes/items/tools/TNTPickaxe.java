@@ -25,7 +25,7 @@ public class TNTPickaxe extends ToolPickaxe {
             EntityTNTPrimed primedTNT = new EntityTNTPrimed(world, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, player);
             world.spawnEntity(primedTNT);
 
-            player.sendMessage(new TextComponentString("Primed TNT spawned!"));
+            player.sendMessage(new TextComponentString("TNT spawned!"));
         }
         return new ActionResult<>(EnumActionResult.SUCCESS, player.getHeldItem(hand));
     }

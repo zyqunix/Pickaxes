@@ -4,6 +4,12 @@ item.ruby.name=Ruby
 item.crystallized_ruby.name=Crystallized Ruby
 item.cobalt_ingot.name=Cobalt Ingot
 
+item.utlimate_piece_left.name=Left Ultimate Piece
+item.utlimate_piece_middle.name=Middle Ultimate Piece
+item.utlimate_piece_right.name=Right Ultimate Piece
+item.ultimate_stick.name=Ultimate Stick
+item.ultimate_handle.name=Ultimate Handle
+
 //Blocks
 tile.ruby_block.name=Ruby Block
 tile.cobalt_block.name=Cobalt Block

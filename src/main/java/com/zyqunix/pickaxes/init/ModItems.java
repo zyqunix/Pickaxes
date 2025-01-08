@@ -6,6 +6,7 @@ import com.zyqunix.pickaxes.items.armor.MiningBoots;
 import com.zyqunix.pickaxes.items.armor.MiningHelmet;
 import com.zyqunix.pickaxes.items.tools.TNTPickaxe;
 import com.zyqunix.pickaxes.items.tools.ToolPickaxe;
+import com.zyqunix.pickaxes.items.tools.UltimatePickaxe;
 import com.zyqunix.pickaxes.util.Reference;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -33,10 +34,15 @@ public class ModItems {
     public static final Item RUBY = new ItemBase("ruby");
     public static final Item COBALT_INGOT = new ItemBase("cobalt_ingot");
 
+    public static final Item ULTIMATE_PIECE_LEFT = new ItemBase("ultimate_piece_left");
+    public static final Item ULTIMATE_PIECE_MIDDLE = new ItemBase("ultimate_piece_middle");
+    public static final Item ULTIMATE_PIECE_RIGHT = new ItemBase("ultimate_piece_right");
+
     // Tools
     public static final ItemPickaxe RUBY_PICKAXE = new ToolPickaxe("ruby_pickaxe", MATERIAL_RUBY);
     public static final ItemPickaxe COBALT_PICKAXE = new ToolPickaxe("cobalt_pickaxe", MATERIAL_COBALT);
     public static final ItemPickaxe TNT_PICKAXE = new TNTPickaxe("tnt_pickaxe", MATERIAL_TNT);
+    public static final ItemPickaxe ULTIMATE_PICKAXE = new UltimatePickaxe("ultimate_pickaxe", MATERIAL_TNT);
 
     // Armor
     public static final Item MINING_HELMET = new MiningHelmet(ARMOR_MATERIAL_MINING, 1, EntityEquipmentSlot.HEAD);
