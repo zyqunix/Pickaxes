@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shaped",
+
+    "pattern":
+    [
+        "LEL",
+        "LDL",
+        "LSL"
+    ],
+
+    "key":
+    {
+	    "E":
+	    {
+		    "item": "minecraft:emerald"
+	    },
+        "L":
+	    {
+		    "item": "minecraft:leather"
+	    },
+        "D":
+	    {
+		    "item": "minecraft:diamond"
+	    },
+        "S":
+	    {
+		    "item": "pa:ultimate_stick"
+	    }
+
+    },
+
+    "result":
+    {
+        "item": "pa:ultimate_handle",
+        "count": 1
+    }
+}
