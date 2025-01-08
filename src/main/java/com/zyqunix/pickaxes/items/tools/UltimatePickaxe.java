@@ -41,12 +41,10 @@ public class UltimatePickaxe extends ToolPickaxe {
 
             for (int x = -aoeSize / 2; x <= aoeSize / 2; x++) {
                 for (int y = -aoeSize / 2; y <= aoeSize / 2; y++) {
-                    for (int z = -aoeSize / 2; z <= aoeSize / 2; z++) {
-                        BlockPos targetPos = pos.add(x, y, z);
+                        BlockPos targetPos = pos.add(x, y, 0);
                         if (world.isAirBlock(targetPos)) continue;
 
                         world.destroyBlock(targetPos, true);
-                    }
                 }
             }
         }
