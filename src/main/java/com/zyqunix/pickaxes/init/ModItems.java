@@ -2,6 +2,7 @@ package com.zyqunix.pickaxes.init;
 
 import com.zyqunix.pickaxes.items.ItemBase;
 import com.zyqunix.pickaxes.items.armor.ArmorBase;
+import com.zyqunix.pickaxes.items.armor.MiningBoots;
 import com.zyqunix.pickaxes.items.armor.MiningHelmet;
 import com.zyqunix.pickaxes.items.tools.TNTPickaxe;
 import com.zyqunix.pickaxes.items.tools.ToolPickaxe;
@@ -41,5 +42,5 @@ public class ModItems {
     public static final Item MINING_HELMET = new MiningHelmet(ARMOR_MATERIAL_MINING, 1, EntityEquipmentSlot.HEAD);
     public static final Item MINING_CHESTPLATE = new ArmorBase("mining_chestplate", ARMOR_MATERIAL_MINING, 1, EntityEquipmentSlot.CHEST);
     public static final Item MINING_PANTS = new ArmorBase("mining_pants", ARMOR_MATERIAL_MINING, 1, EntityEquipmentSlot.LEGS);
-    public static final Item MINING_BOOTS = new ArmorBase("mining_boots", ARMOR_MATERIAL_MINING, 1, EntityEquipmentSlot.FEET);
+    public static final Item MINING_BOOTS = new MiningBoots(ARMOR_MATERIAL_MINING, 1, EntityEquipmentSlot.FEET);
 }

@@ -17,11 +17,11 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class MiningHelmet extends ItemArmor implements IHasModel{
+public class MiningBoots extends ItemArmor implements IHasModel{
 
-    public MiningHelmet(ArmorMaterial material, int renderIndex, EntityEquipmentSlot equipmentSlot) {
+    public MiningBoots(ArmorMaterial material, int renderIndex, EntityEquipmentSlot equipmentSlot) {
         super(material, renderIndex, equipmentSlot);
-        String name = "mining_helmet";
+        String name = "mining_boots";
         setUnlocalizedName(name);
         setRegistryName(name);
         setCreativeTab(CreativeTabs.COMBAT);
@@ -33,15 +33,15 @@ public class MiningHelmet extends ItemArmor implements IHasModel{
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
         if (!world.isRemote) {
-            if (!player.isPotionActive(MobEffects.HASTE)) {
-                player.addPotionEffect(new PotionEffect(MobEffects.HASTE, 40, 0, true, false));
+            if (!player.isPotionActive(MobEffects.SPEED)) {
+                player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 40, 0, true, false));
             }
         }
     }
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(TextFormatting.GREEN + "Grants Haste when worn.");
+        tooltip.add(TextFormatting.GREEN + "Grants Speed when worn.");
     }
 
     @Override
