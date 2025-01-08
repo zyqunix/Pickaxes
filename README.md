@@ -17,7 +17,7 @@ The **Pickaxe Expansion Mod** introduces exciting new pickaxes, blocks, and reso
 
 2. **Cobalt Pickaxe**  
    - A tough and efficient pickaxe crafted with Cobalt Ingots.
-   - 960 durability, with a fast mining speed .
+   - 960 durability, with a fast mining speed.
 
 3. **Ultimate Pickaxe**  
    - The most powerful pickaxe in the mod, made with special components.
@@ -78,7 +78,6 @@ The **Pickaxe Expansion Mod** introduces exciting new pickaxes, blocks, and reso
      - **Handle + Stick** for the pickaxe base.
      - Combine the assembled head and base to craft the Ultimate Pickaxe.
 </details>
----
 
 ## Future Plans
 - Add more ores and tools.
