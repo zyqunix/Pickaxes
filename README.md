@@ -1,5 +1,15 @@
 # Pickaxe Expansion Mod
 
+---
+
+## Installation
+1. Ensure you have **Minecraft Forge** installed for version 1.12.2.
+2. Download the mod `.jar` file.
+3. Place the `.jar` file into your Minecraft `mods` folder.
+4. Launch Minecraft and enjoy!
+
+---
+
 **Version:** 1.12.2 (Forge)  
 **Mod Type:** Tool and Resource Expansion
 
@@ -9,6 +19,9 @@ The **Pickaxe Expansion Mod** introduces exciting new pickaxes, blocks, and reso
 ---
 
 ## Features
+
+<details>
+   <summary>⚠ SPOILERS AHEAD ⚠</summary>
 
 ### New Pickaxes
 1. **Ruby Pickaxe**  
@@ -54,29 +67,20 @@ The **Pickaxe Expansion Mod** introduces exciting new pickaxes, blocks, and reso
 
 ---
 
-## Installation
-1. Ensure you have **Minecraft Forge** installed for version 1.12.2.
-2. Download the mod `.jar` file.
-3. Place the `.jar` file into your Minecraft `mods` folder.
-4. Launch Minecraft and enjoy!
-
----
-
 ## Crafting Recipes
-<details>
-   <summary>SPOILERS</summary>
 
-      ### Ruby Pickaxe
-      Standard pickaxe recipe using Ruby Gems.
+      - Ruby Pickaxe
+         Standard pickaxe recipe using Ruby Gems.
       
-      ### Cobalt Pickaxe
-      Standard pickaxe recipe using Cobalt Ingots.
+      - Cobalt Pickaxe
+         Standard pickaxe recipe using Cobalt Ingots.
       
-      ### Ultimate Pickaxe
-      Requires assembling:
-      - **Left Piece + Middle Piece + Right Piece** to form the pickaxe head.
-     - **Handle + Stick** for the pickaxe base.
-     - Combine the assembled head and base to craft the Ultimate Pickaxe.
+      - Ultimate Pickaxe
+         Left Piece      -> Top Left
+         Middle Piece    -> Top Middle
+         Right Piece     -> Top Right
+         Ultimate Stick  -> Center
+         Ultimate Handle -> Bottom Middle 
 </details>
 
 ## Future Plans
