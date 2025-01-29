@@ -1,9 +1,11 @@
 package com.zyqunix.pickaxes;
 
+import com.zyqunix.pickaxes.init.ModEntities;
 import com.zyqunix.pickaxes.init.ModRecipes;
 import com.zyqunix.pickaxes.proxy.CommonProxy;
 import com.zyqunix.pickaxes.util.Reference;
 
+import com.zyqunix.pickaxes.util.handlers.RenderHandler;
 import com.zyqunix.pickaxes.world.ModWorldGen;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -26,6 +28,8 @@ public class Main {
     @EventHandler
     public static void PreInit(FMLPreInitializationEvent event) {
         GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
+        ModEntities.registerEntities();
+        RenderHandler.registerEntityRenders();
     }
 
     @EventHandler
