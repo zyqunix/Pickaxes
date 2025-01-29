@@ -14,6 +14,7 @@ import net.minecraft.world.World;
 
 public class EntityScreecher extends EntityCaveSpider {
     private boolean tamed = false;
+    private EntityLivingBase owner;
 
     public EntityScreecher(World worldIn) {
         super(worldIn);
@@ -29,9 +30,9 @@ public class EntityScreecher extends EntityCaveSpider {
     @Override
     protected void applyEntityAttributes() {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(4.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(40.0D);
         this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.3D);
-        this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(2.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(4.0D);
     }
 
     @Override
@@ -43,7 +44,20 @@ public class EntityScreecher extends EntityCaveSpider {
             if (!player.isSneaking() && !player.isSpectator()) {
                 player.attackEntityFrom(DamageSource.causeMobDamage(this), 1.0F);
             }
+        } else if (tamed && owner != null) {
+            this.getNavigator().tryMoveToEntityLiving(owner, 1.0D);
+            if (this.getAttackTarget() == null) {
+                this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<>(this, EntityLiving.class, 10, true, false, entity -> entity.isCreatureType(EnumCreatureType.MONSTER, false)));
+            }
         }
+    }
+
+    @Override
+    public boolean attackEntityFrom(DamageSource source, float amount) {
+        if (source == DamageSource.CACTUS || source == DamageSource.IN_WALL || source.isExplosion()) {
+            return false; // Prevents dying from environmental damage.
+        }
+        return super.attackEntityFrom(source, amount);
     }
 
     @Override
@@ -55,7 +69,7 @@ public class EntityScreecher extends EntityCaveSpider {
             }
             this.tamed = true;
             this.setAttackTarget(null);
-            this.targetTasks.addTask(1, new EntityAINearestAttackableTarget<>(this, EntityLiving.class, 10, true, false, entity -> entity.isCreatureType(EnumCreatureType.MONSTER, false)));
+            this.owner = player;
             return true;
         }
         return super.processInteract(player, hand);
