@@ -88,5 +88,3 @@ The **Pickaxe Expansion Mod** introduces exciting new pickaxes, blocks, and reso
 
 ## Feedback and Support
 Found a bug or have a suggestion? Feel free to reach out! Your feedback helps improve the mod.
-
-Happy mining!
