@@ -29,3 +29,6 @@ item.mining_helmet.name=Mining Helmet
 item.mining_chestplate.name=Mining Chestplate
 item.mining_pants.name=Mining Pants
 item.mining_boots.name=Mining Boots
+
+//Entities
+entity.screecher.name=Screecher
