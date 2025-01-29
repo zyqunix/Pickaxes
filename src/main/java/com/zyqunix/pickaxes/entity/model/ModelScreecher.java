@@ -65,11 +65,11 @@ public class ModelScreecher extends ModelBase {
 
     @Override
     public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entityIn) {
-        this.FrontLeftLeg.rotateAngleY = MathHelper.cos(limbSwing * 0.6662f) * limbSwingAmount;
-        this.BackLeftLeg.rotateAngleY = MathHelper.cos(limbSwing * 0.6662f) * limbSwingAmount;
+        this.FrontLeftLeg.rotateAngleY = MathHelper.cos(limbSwing * 0.3331f) * limbSwingAmount;
+        this.BackLeftLeg.rotateAngleY = MathHelper.cos(limbSwing * 0.3331f) * limbSwingAmount;
 
-        this.FrontRightLeg.rotateAngleY = MathHelper.cos(limbSwing * 0.6662f + (float)Math.PI) * limbSwingAmount;
-        this.BackRightLeg.rotateAngleY = MathHelper.cos(limbSwing * 0.6662f + (float)Math.PI) * limbSwingAmount;
+        this.FrontRightLeg.rotateAngleY = MathHelper.cos(limbSwing * 0.3331f) * limbSwingAmount;
+        this.BackRightLeg.rotateAngleY = MathHelper.cos(limbSwing * 0.3331f) * limbSwingAmount;
 
         this.Head.rotateAngleY = netHeadYaw * 0.017453292f;
         this.Head.rotateAngleX = headPitch * 0.017453292f;
