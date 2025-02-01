@@ -8,7 +8,6 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
@@ -24,8 +23,8 @@ public class UltimatePickaxe extends ToolPickaxe {
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
         if (!world.isRemote) {
             if (player.isSneaking()) {
-                // Cycle AOE size: 3x3 -> 5x5 -> 7x7 -> 3x3
-                aoeSize = (aoeSize == 7) ? 3 : aoeSize + 2;
+                // Cycle AOE size: 1x1 ->  3x3 -> 5x5 -> 7x7 -> 3x3
+                aoeSize = (aoeSize == 7) ? 1 : aoeSize + 2;
                 player.sendMessage(new TextComponentString("AOE size set to " + aoeSize + "x" + aoeSize));
             }
         }
@@ -38,13 +37,23 @@ public class UltimatePickaxe extends ToolPickaxe {
 
         if (!world.isRemote) {
             EnumFacing facing = player.getHorizontalFacing();
+            int offsetX = facing.getFrontOffsetX();
+            int offsetZ = facing.getFrontOffsetZ();
+            int offsetY = 0;
+
+            if (facing == EnumFacing.UP || facing == EnumFacing.DOWN) {
+                offsetY = facing == EnumFacing.UP ? 1 : -1;
+            }
 
             for (int x = -aoeSize / 2; x <= aoeSize / 2; x++) {
                 for (int y = -aoeSize / 2; y <= aoeSize / 2; y++) {
-                        BlockPos targetPos = pos.add(x, y, 0);
+                    for (int z = -aoeSize / 2; z <= aoeSize / 2; z++) {
+                        BlockPos targetPos = pos.add(x * offsetX, y + offsetY, z * offsetZ);
+
                         if (world.isAirBlock(targetPos)) continue;
 
                         world.destroyBlock(targetPos, true);
+                    }
                 }
             }
         }
