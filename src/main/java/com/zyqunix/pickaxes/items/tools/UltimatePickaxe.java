@@ -8,8 +8,8 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
+import net.minecraft.util.text.TextComponentString;
 
 public class UltimatePickaxe extends ToolPickaxe {
     private int aoeSize = 3;
@@ -23,8 +23,8 @@ public class UltimatePickaxe extends ToolPickaxe {
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
         if (!world.isRemote) {
             if (player.isSneaking()) {
-                // Cycle AOE size: 1x1 ->  3x3 -> 5x5 -> 7x7 -> 3x3
-                aoeSize = (aoeSize == 7) ? 1 : aoeSize + 2;
+                // Cycle AOE size: 3x3 -> 5x5 -> 7x7 -> 3x3
+                aoeSize = (aoeSize == 7) ? 3 : aoeSize + 3;
                 player.sendMessage(new TextComponentString("AOE size set to " + aoeSize + "x" + aoeSize));
             }
         }
@@ -36,20 +36,12 @@ public class UltimatePickaxe extends ToolPickaxe {
         World world = player.world;
 
         if (!world.isRemote) {
-            EnumFacing facing = player.getHorizontalFacing();
-            int offsetX = facing.getFrontOffsetX();
-            int offsetZ = facing.getFrontOffsetZ();
-            int offsetY = 0;
+            int halfAOESize = aoeSize / 2;
 
-            if (facing == EnumFacing.UP || facing == EnumFacing.DOWN) {
-                offsetY = facing == EnumFacing.UP ? 1 : -1;
-            }
-
-            for (int x = -aoeSize / 2; x <= aoeSize / 2; x++) {
-                for (int y = -aoeSize / 2; y <= aoeSize / 2; y++) {
-                    for (int z = -aoeSize / 2; z <= aoeSize / 2; z++) {
-                        BlockPos targetPos = pos.add(x * offsetX, y + offsetY, z * offsetZ);
-
+            for (int x = -halfAOESize; x <= halfAOESize; x++) {
+                for (int y = -halfAOESize; y <= halfAOESize; y++) {
+                    for (int z = -halfAOESize; z <= halfAOESize; z++) {
+                        BlockPos targetPos = pos.add(x, y, z);
                         if (world.isAirBlock(targetPos)) continue;
 
                         world.destroyBlock(targetPos, true);
