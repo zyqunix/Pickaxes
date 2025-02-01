@@ -2,7 +2,6 @@ package com.zyqunix.pickaxes.world.gen;
 
 import com.zyqunix.pickaxes.world.gen.generators.WorldGenStructure;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockStone;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -12,9 +11,9 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
-import scala.actors.threadpool.Arrays;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class WorldGenCustomStructures implements IWorldGenerator {
@@ -34,7 +33,7 @@ public class WorldGenCustomStructures implements IWorldGenerator {
     }
 
     private void generateStructure(WorldGenerator generator, World world, Random random, int chunkX, int chunkZ, int chance, Block topBlock, Class<?>... classes) {
-        ArrayList<Class<?>> classesList = new ArrayList<Class<?>>(Arrays.asList(classes));
+        ArrayList<Class<?>> classesList = new ArrayList<Class<?>>(Arrays.asList(classes)); // Updated
 
         int x = (chunkX*16) + random.nextInt(15);
         int z = (chunkZ*16) + random.nextInt(15);
