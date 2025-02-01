@@ -7,6 +7,7 @@ import com.zyqunix.pickaxes.util.Reference;
 
 import com.zyqunix.pickaxes.util.handlers.RenderHandler;
 import com.zyqunix.pickaxes.world.ModWorldGen;
+import com.zyqunix.pickaxes.world.gen.WorldGenCustomStructures;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -28,6 +29,7 @@ public class Main {
     @EventHandler
     public static void PreInit(FMLPreInitializationEvent event) {
         GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
+        GameRegistry.registerWorldGenerator(new WorldGenCustomStructures(), 0);
         ModEntities.registerEntities();
         RenderHandler.registerEntityRenders();
     }

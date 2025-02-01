@@ -1,6 +1,7 @@
 package com.zyqunix.pickaxes.entity;
 
 import com.zyqunix.pickaxes.init.ModItems;
+import com.zyqunix.pickaxes.util.handlers.LootTableHandler;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityCaveSpider;
@@ -9,8 +10,11 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
 
 public class EntityScreecher extends EntityCaveSpider {
     private boolean tamed = false;
@@ -39,6 +43,12 @@ public class EntityScreecher extends EntityCaveSpider {
     public void onUpdate() {
         super.onUpdate();
         this.fallDistance = 0.0F;
+
+        if (tamed) {
+            this.motionX = 0;
+            this.motionY = 0;
+            this.motionZ = 0;
+        }
 
         if (!tamed && this.getAttackTarget() instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) this.getAttackTarget();
@@ -74,9 +84,19 @@ public class EntityScreecher extends EntityCaveSpider {
             this.tamed = true;
             this.setAttackTarget(null);
             this.owner = player;
+
+            this.motionX = 0;
+            this.motionY = 0;
+            this.motionZ = 0;
             return true;
         }
         return super.processInteract(player, hand);
+    }
+
+    @Nullable
+    @Override
+    protected ResourceLocation getLootTable() {
+        return LootTableHandler.SCREECHER;
     }
 
     @Override
@@ -97,5 +117,4 @@ public class EntityScreecher extends EntityCaveSpider {
     public float getEyeHeight() {
         return 0.25F;
     }
-
 }
