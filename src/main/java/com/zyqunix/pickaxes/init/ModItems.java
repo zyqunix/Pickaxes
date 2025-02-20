@@ -4,6 +4,7 @@ import com.zyqunix.pickaxes.items.ItemBase;
 import com.zyqunix.pickaxes.items.armor.ArmorBase;
 import com.zyqunix.pickaxes.items.armor.MiningBoots;
 import com.zyqunix.pickaxes.items.armor.MiningHelmet;
+import com.zyqunix.pickaxes.items.tools.P250;
 import com.zyqunix.pickaxes.items.tools.TNTPickaxe;
 import com.zyqunix.pickaxes.items.tools.ToolPickaxe;
 import com.zyqunix.pickaxes.items.tools.UltimatePickaxe;
@@ -13,6 +14,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
 
 import java.util.ArrayList;
@@ -23,6 +25,7 @@ public class ModItems {
     public static final List<Item> ITEMS = new ArrayList<Item>();
 
     // Materials
+    public static final Item.ToolMaterial MATERIAL_P250 = EnumHelper.addToolMaterial("material_p250", 1, 13, 0f, 4.0f, 15);
     public static final Item.ToolMaterial MATERIAL_RUBY = EnumHelper.addToolMaterial("material_ruby", 3, 830, 5.0f, 4.0f, 15);
     public static final Item.ToolMaterial MATERIAL_COBALT = EnumHelper.addToolMaterial("material_cobalt", 3, 960, 6.0f, 4.0f, 10);
     public static final Item.ToolMaterial MATERIAL_TNT = EnumHelper.addToolMaterial("material_tnt", 3, 100, 5.0f, 4.0f, 10);
@@ -46,6 +49,9 @@ public class ModItems {
     public static final ItemPickaxe COBALT_PICKAXE = new ToolPickaxe("cobalt_pickaxe", MATERIAL_COBALT);
     public static final ItemPickaxe TNT_PICKAXE = new TNTPickaxe("tnt_pickaxe", MATERIAL_TNT);
     public static final ItemPickaxe ULTIMATE_PICKAXE = new UltimatePickaxe("ultimate_pickaxe", MATERIAL_ULTIMATE);
+
+    // Weapons
+    public static final ItemSword P250 = new P250("p250", MATERIAL_P250);
 
     // Armor
     public static final Item MINING_HELMET = new MiningHelmet(ARMOR_MATERIAL_MINING, 1, EntityEquipmentSlot.HEAD);

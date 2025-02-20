@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+
+    "pattern":
+    [
+        "DII",
+        " GI",
+        " SI"
+    ],
+
+    "key":
+    {
+        "D":
+        {
+            "item": "minecraft:diamond"
+        },
+        "I":
+        {
+	        "item": "minecraft:iron_ingot"
+        },
+        "G":
+        {
+	        "item": "minecraft:gold_ingot"
+        },
+        "S":
+        {
+	        "item": "minecraft:stick"
+        }
+    },
+
+    "result":
+    {
+        "item": "pa:p250",
+        "count": 1
+    }
+}
